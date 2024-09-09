@@ -91,3 +91,24 @@ function disableDarkMode() {
     document.body.style.color = 'black';
     localStorage.setItem('darkMode', 'disabled');
 }
+
+
+document.addEventListener('keydown', function(event) {
+    if(event.key == 'ArrowUp'){
+        inc();
+    }
+    if(event.key == 'ArrowDown'){
+        dec();
+    }
+    if(event.key == 'r' || event.key == 'R'){
+        reset();
+    }
+});
+
+document.getElementById('del').addEventListener('keydown', function(event) {
+    if(event.key == 'Enter'){
+        autoInc();
+    }
+});
+
+
